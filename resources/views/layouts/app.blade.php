@@ -7,14 +7,14 @@
 
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <link rel="icon" href="/public/favicon.ico">
+    <link rel="icon" href="{{ asset('favicon.ico') }}">
 
     <title>@yield('title', 'Yujia')</title>
     <meta name="keywords" content="polo,T-shirt,vest,sweater,hoddy,long sleeves,">
     <meta name="description" content="YU JIA Garment CO.LTD from China. The main polo,T-shirt,vest.Major for school polo,competive T-shirt,polo,vest.">
 
-    <link href="__CSS__/bootstrap.min.css" rel="stylesheet">
-    <link href="__CSS__/carousel.css" rel="stylesheet">
+    {{--<link href="__CSS__/bootstrap.min.css" rel="stylesheet">
+    <link href="__CSS__/carousel.css" rel="stylesheet">--}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script>
         (function(){
@@ -40,13 +40,13 @@
 
     </div>
 
-    @include('index.layouts._footer')
+    @include('layouts._footer')
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     {{--<script src="__JS__/jquery.min.js"></script>
-    <script src="__JS__/bootstrap.min.js"></script>--}}
-    <script src="__STATIC__/layer/layer.js"></script>
+    <script src="__JS__/bootstrap.min.js"></script>
+    <script src="__STATIC__/layer/layer.js"></script>--}}
     <script>
         $(document).ready(function(){
             $("#subscribeBtn").click(function() {

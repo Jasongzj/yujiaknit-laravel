@@ -1,7 +1,7 @@
 <nav class="navbar" role="navigation">
     <!--logo及导航按钮-->
     <div class="navbar-header">
-        <a class="logo" href="{{ route('root') }}"><img class="" src="__IMAGE__/logo-1.png" title="logo" alt="logo"></a>
+        <a class="logo" href="{{ route('root') }}"><img class="" src="{{ asset('images/logo-1.png') }}" title="logo" alt="logo"></a>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navcol">
             <span class="sr-only">切换导航</span>
             <span class="icon-bar"></span>
@@ -25,7 +25,7 @@
     <div class="collapse navbar-collapse" id="navcol">
         <ul class="nav navbar-nav nav-menu">
             <li class="">
-                <a href="{{ route('root') }}}">HOME<span class="hidden-xs {$nav=='index' ? 'current' : ''}"></span></a>
+                <a href="{{ route('root') }}">HOME<span class="hidden-xs {$nav=='index' ? 'current' : ''}"></span></a>
 
             </li>
             <li class="">
@@ -43,13 +43,13 @@
                 </ul>
             </li>
             <li class="">
-                <a href="{:url('index/brands/index')}">BRANDS<span class="hidden-xs {$nav=='brands' ? 'current' : ''}" ></span></a>
+                <a href="{{ route('brands.index') }}">BRANDS<span class="hidden-xs {$nav=='brands' ? 'current' : ''}" ></span></a>
             </li>
             <li class="">
-                <a href="{:url('index/news/index')}">NEWS<span class="hidden-xs {$nav=='news' ? 'current' : ''}"></span></a>
+                <a href="{{ route('news.index') }}">NEWS<span class="hidden-xs {$nav=='news' ? 'current' : ''}"></span></a>
             </li>
             <li class="">
-                <a href="{:url('index/contact/index')}">CONTACT US<span class="hidden-xs {$nav=='contact' ? 'current' : ''}"></span></a>
+                <a href="{{ route('contact_us') }}">CONTACT US<span class="hidden-xs {$nav=='contact' ? 'current' : ''}"></span></a>
             </li>
         </ul>
     </div>

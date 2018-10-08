@@ -7,10 +7,9 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
-    public function index(Category $category)
+    public function index()
     {
-        $categories = $category->all();
         $nav = 'index';
-        return view('index.index', compact('categories', 'nav'));
+        return view('index', compact('nav'));
     }
 }

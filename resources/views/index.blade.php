@@ -1,4 +1,4 @@
-@extends('index.layouts.app')
+@extends('layouts.app')
 
 @section('title', 'Yujia')
 
@@ -15,16 +15,16 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <a href="{:url('products/index', 'cate=1')}"><img class="first-slide" src="__IMAGE__/banner/golfer1.jpg" alt="First slide"></a>
+                    <a href="{:url('products/index', 'cate=1')}"><img class="first-slide" src="{{ asset('images/banner/golfer1.jpg') }}" alt="First slide"></a>
                 </div>
                 <div class="item">
-                    <a href="{:url('products/index', 'cate=1')}"><img class="second-slide" src="__IMAGE__/banner/baby-shirt1.jpg" alt="Second slide"></a>
+                    <a href="{:url('products/index', 'cate=1')}"><img class="second-slide" src="{{ asset('images/banner/baby-shirt1.jpg') }}" alt="Second slide"></a>
                 </div>
                 <div class="item">
-                    <img class="third-slide" src="__IMAGE__/banner/cotton.jpg" alt="Third slide">
+                    <img class="third-slide" src="{{ asset('images/banner/cotton.jpg') }}" alt="Third slide">
                 </div>
                 <div class="item">
-                    <img class="forth-slide" src="__IMAGE__/banner/container.jpg" alt="Forth slide">
+                    <img class="forth-slide" src="{{ asset('images/banner/container.jpg') }}" alt="Forth slide">
                 </div>
             </div>
         </div>
@@ -58,14 +58,10 @@
         <div class="wrap">
             <div class="license">
                 <ul id="scroll">
-                    <li><img src="__IMAGE__/2017001.jpg"  alt=""/></li>
-                    <li><img src="__IMAGE__/2017005.jpg"  alt=""/></li>
-                    <li><img src="__IMAGE__/2017006.jpg"  alt=""/></li>
-                    <li><img src="__IMAGE__/oeko.png" alt=""/></li>
-                    <!--<li><img src="__IMAGE__/2017001.jpg"  alt=""/></li>
-                    <li><img src="__IMAGE__/2017005.jpg"  alt=""/></li>
-                    <li><img src="__IMAGE__/2017006.jpg"  alt=""/></li>
-                    <li><img src="__IMAGE__/oeko.png" alt=""/></li>-->
+                    <li><img src="{{ asset('images/2017001.jpg') }}"  alt=""/></li>
+                    <li><img src="{{ asset('images/2017005.jpg') }}"  alt=""/></li>
+                    <li><img src="{{ asset('images/2017006.jpg') }}"  alt=""/></li>
+                    <li><img src="{{ asset('images/oeko.png') }}" alt=""/></li>
                 </ul>
                 <ul id="scroll2"></ul>
             </div>
