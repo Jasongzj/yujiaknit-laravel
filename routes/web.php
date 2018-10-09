@@ -20,3 +20,7 @@ Route::resource('products', 'ProductsController', ['only' => 'index', 'show']);
 Route::resource('brands', 'BrandsController', ['only' => 'index']);
 
 Route::get('contactus', 'ContactUsController@index')->name('contact_us');
+
+Route::resource('about', 'AboutController', ['only' => 'index']);
+
+Route::resource('subscriptions', 'SubscriptionsController', ['only' => ['index', 'store']]);

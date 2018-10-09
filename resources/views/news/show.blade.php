@@ -12,7 +12,7 @@
     <!--新闻内容-->
     <div class="container content">
         <div class="breadnav">
-            <ol class="breadcrumb aboutus-nav">
+            <ol class="breadcrumb">
                 <li><a href="{{ route('root') }}">HOME</a></li>
                 <li><a href="{{ route('news.index') }}">NEWS</a></li>
                 <li>{{ $news->title }}</li>

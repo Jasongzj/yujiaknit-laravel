@@ -24,7 +24,54 @@ body {
 }
 @font-face {
   font-family: VHLUCH;
-  src: url('/public/static/index/fonts/VHLUCH.TTF');
+  src: url('/public/fonts/VHLUCH.TTF');
+}
+
+ul {
+  list-style: none;
+}
+
+.content {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: solid 2px #e0e0e1;
+  margin-bottom: 60px;
+}
+.breadnav {
+  margin-bottom: 20px;
+  li a:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+.sidebar {
+  padding: 5px;
+  margin-bottom: 20px;
+
+  .title {
+    padding: 15px 0;
+    border-bottom: solid 1px #000000;
+  }
+
+  .list{
+    padding: 5px;
+    font-size: 12px;
+
+    li {
+      padding-bottom: 5px;
+    }
+
+    p {
+      span {
+        padding-right: 5px;
+      }
+    }
+  }
+}
+.wechat {
+  width: 80%;
+  margin: 10px auto;
 }
 
 /*header*/
@@ -178,7 +225,7 @@ body {
 
 
 /* 证件轮播 */
-.box-title {
+/*.box-title {
   text-align: center;
   padding: 10px 0;
 }
@@ -189,19 +236,7 @@ body {
   color: #3f68e1;
   background-color: #3f68e1;
   margin-top: -2px;
-}
-.license ul li {
-  display: block;
-  float: left;
-  margin-right: -1px;
-  padding: 0 20px;
-}
-
-.license {
-  height: 300px;
-  width: 5000px;
-  position: absolute;
-}
+}*/
 
 #scroll, #scroll2 {
   float: left;
@@ -211,12 +246,27 @@ body {
 .wrap {
   position: relative;
   width: 100%;
-  margin: auto;
   margin-bottom: 30px;
   padding: 10px 0;
   height: 300px;
-  overflow: hidden
+  overflow: hidden;
+
+  .license {
+    height: 300px;
+    width: 5000px;
+    position: absolute;
+
+    ul {
+      li {
+        display: block;
+        float: left;
+        margin-right: -1px;
+        padding: 0 20px;
+      }
+    }
+  }
 }
+
 @media screen and (min-width: 767px) {
   .license li img {
     max-width: 200px;
@@ -224,6 +274,7 @@ body {
     padding: 5px 10px;
   }
 }
+
 @media screen and (max-width: 767px) {
   .license li img {
     max-width: 150px;
@@ -231,3 +282,89 @@ body {
     padding: 5px 10px 5px 0;
   }
 }
+
+
+/*模块标题*/
+.section-title {
+  padding-bottom: 10px;
+  padding-top: 30px;
+  color: #969696;
+  text-align: center;
+  border-bottom: 1px #E8E8E9 solid;
+
+  p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-title p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+  }
+}
+
+/*产品栏*/
+.home-cate {
+  margin-top: 20px ;
+  margin-bottom: 30px;
+
+  .home-catelist {
+    margin: 15px 0;
+
+    .home-cate-link {
+      text-align: center;
+      text-decoration: none;
+
+      :hover {
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .home-cate-img {
+        width: 100%;
+        padding: 0 40px;
+      }
+
+      .home-cate-title {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 786px) {
+  .home-cate-title {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+  }
+  .home-cate-img {
+    padding: 0;
+  }
+}
+
+/* 面包屑导航 */
+.breadcrumb-nav {
+  padding: 0;
+  margin: auto 0;
+
+  background-color: transparent;
+  border-radius: 0;
+}
+
+/* 联系我们页面 */
+@import "contact_us";
+
+/* 新闻页 */
+@import "news";
+
+/* 产品页 */
+@import "products";
+
+/* 品牌页 */
+@import "brands";
+
+/* 关于我们页 */
+@import "about_us";

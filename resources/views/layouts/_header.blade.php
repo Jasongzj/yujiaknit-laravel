@@ -29,7 +29,7 @@
 
             </li>
             <li class="">
-                <a href="{:url('index/about/index')}">ABOUT US<span class="hidden-xs {$nav=='about' ? 'current' : ''}"></span></a>
+                <a href="{{ route('about.index') }}">ABOUT US<span class="hidden-xs {$nav=='about' ? 'current' : ''}"></span></a>
                 <p class="hidden-xs"></p>
             </li>
             <li class="dropdown">

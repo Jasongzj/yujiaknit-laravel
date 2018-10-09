@@ -7,6 +7,7 @@
 
     <meta name="keywords" content="">
     <meta name="description" content="">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="{{ asset('favicon.ico') }}">
 
     <title>@yield('title', 'Yujia')</title>
@@ -44,39 +45,37 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    {{--<script src="__JS__/jquery.min.js"></script>
-    <script src="__JS__/bootstrap.min.js"></script>
-    <script src="__STATIC__/layer/layer.js"></script>--}}
+    <script src="{{ asset('js/layer/layer.js') }}"></script>
     <script>
         $(document).ready(function(){
+            $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
             $("#subscribeBtn").click(function() {
                 var obj = $(this);
                 $.ajax({
-                    url:"{:url('index/subscribe')}",
+                    url:"{{ route('subscriptions.store') }}",
                     type:'POST',
                     data:$('#subscribeInfo').serialize(),
                     dataType:'json',
                     async:true,
                     success:function(result) {
-                        if (result.code == 200) {
-                            layer.open({
-                                type: 2,
-                                area: [400+'px', 200 +'px'],
-                                fix: false, //不固定
-                                maxmin: true,
-                                shade:0.4,
-                                shadeClose: true, //点击遮罩关闭
-                                content: "{:url('index/subscribe')}"
-                            });
-                        } else if (result.code == 600) {
-                            console.log(result)
-                            if (result.msg == 'emailRequired') {
-                                $("#notice_subscribe").parent().addClass('has-error');
-                                $("#notice_subscribe").css('display','block');
-                            } else if (result.msg == 'emailUnformat') {
-                                $("#notice_correct_subscribe").parent().addClass('has-error');
-                                $("#notice_correct_subscribe").css('display','block');
-                            }
+                        layer.open({
+                            type: 2,
+                            area: [400+'px', 200 +'px'],
+                            fix: false, //不固定
+                            maxmin: true,
+                            shade:0.4,
+                            shadeClose: true, //点击遮罩关闭
+                            content: '{{ route('subscriptions.index') }}',
+                        });
+                    },
+                    error: function (result) {
+                        console.log(result.responseJSON.errors.email[0])
+                        if (result.responseJSON.errors.email[0] == 'emailRequired') {
+                            $("#notice_subscribe").parent().addClass('has-error');
+                            $("#notice_subscribe").css('display','block');
+                        } else if (result.responseJSON.errors.email[0] == 'emailUnformat') {
+                            $("#notice_correct_subscribe").parent().addClass('has-error');
+                            $("#notice_correct_subscribe").css('display','block');
                         }
                     }
                 })

@@ -7,10 +7,10 @@
                         <a href="{{ route('root') }}">HOME</a>
                     </li>
                     <li class="">
-                        <a href="{:url('index/about/index')}">ABOUT US</a>
+                        <a href="{{ route('about.index') }}">ABOUT US</a>
                     </li>
                     <li class="">
-                        <a href="{:url('index/products/index', 'cate=1')}">PRODUCTS</a >
+                        <a href="{{ route('products.index', ['category_id' => 1]) }}">PRODUCTS</a >
                     </li>
                     <li class="">
                         <a href="{{ route('brands.index') }}">BRANDS</a>

@@ -8,6 +8,7 @@ class AboutController extends Controller
 {
     public function index()
     {
-
+        $nav = 'about';
+        return view('about.index', compact('nav'));
     }
 }

@@ -1,0 +1,47 @@
+/*contact-us*/
+.contact-bg {
+  padding: 100px;
+  background: url("/images/contact_us.png");
+  background-size: 100%;
+}
+
+/*.contact-nav {
+  padding: 0 10px 0 15px;
+  margin: auto 0;
+  background-color: transparent;
+  border-radius: 0;
+}*/
+
+.contact-content {
+  margin-top: 20px;
+
+  .contact-form {
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    .col-sm-9 {
+      padding-left: 0;
+    }
+
+    .list {
+      margin-bottom: 5px;
+      padding: 0;
+      font-size: 18px;
+
+      li {
+        padding-bottom: 10px;
+      }
+
+      span {
+        padding-right: 10px;
+      }
+    }
+
+    .wechat {
+      float: right;
+      margin: 0 auto;
+    }
+  }
+}
+
