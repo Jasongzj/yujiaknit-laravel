@@ -7,11 +7,18 @@ use Cache;
 
 class Category extends Model
 {
+    protected $table = 'categories';
+
     protected $fillable = ['name', 'icon', 'sort'];
 
-    protected $cacheKey = 'yujia_categories';
+    public $cacheKey = 'yujia_categories';
 
     protected $cacheExpireInMinutes = 1440;
+
+    public function product()
+    {
+        return $this->hasMany(Product::class);
+    }
 
     public function getAllCache()
     {

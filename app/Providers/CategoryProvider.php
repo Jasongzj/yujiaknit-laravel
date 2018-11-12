@@ -16,6 +16,7 @@ class CategoryProvider extends ServiceProvider
     public function boot(Category $category)
     {
         $categories = $category->getAllCache();
+        //dd($categories);
         View::share('categories', $categories);
     }
 

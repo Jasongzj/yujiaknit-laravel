@@ -15,10 +15,10 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <a href="{:url('products/index', 'cate=1')}"><img class="first-slide" src="{{ asset('images/banner/golfer1.jpg') }}" alt="First slide"></a>
+                    <a href="{{ route('products.index', ['category_id' => 1]) }}"><img class="first-slide" src="{{ asset('images/banner/golfer1.jpg') }}" alt="First slide"></a>
                 </div>
                 <div class="item">
-                    <a href="{:url('products/index', 'cate=1')}"><img class="second-slide" src="{{ asset('images/banner/baby-shirt1.jpg') }}" alt="Second slide"></a>
+                    <a href="{{ route('products.index', ['category_id' => 1]) }}"><img class="second-slide" src="{{ asset('images/banner/baby-shirt1.jpg') }}" alt="Second slide"></a>
                 </div>
                 <div class="item">
                     <img class="third-slide" src="{{ asset('images/banner/cotton.jpg') }}" alt="Third slide">
@@ -41,8 +41,8 @@
         <div class="row ">
             @foreach($categories as $category)
                 <div class="col-xs-4 home-catelist">
-                    <a class="home-cate-link"  href="">
-                        <div><img class="home-cate-img img-circle" src="{{ $category->img_url }}" alt="POLO"></div>
+                    <a class="home-cate-link"  href="{{ route('products.index', ['category_id' => $category->id]) }}">
+                        <div><img class="home-cate-img img-circle" src="{{ asset('images/' . $category->icon) }}" alt="POLO"></div>
                         <div class="home-cate-title">{{ $category->name }}</div>
                     </a>
                 </div>

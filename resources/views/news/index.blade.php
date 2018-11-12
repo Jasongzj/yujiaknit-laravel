@@ -24,12 +24,12 @@
                             @foreach($newsList as $news)
                                 <li>
                                     <a href="{{ route('news.show', $news->id) }}">{{ $news->title }}</a>
-                                    <span class="news-date">{{ $news->create_time->diffForHumans() }}</span>
+                                    <span class="news-date">{{ $news->created_at->diffForHumans() }}</span>
                                 </li>
                             @endforeach
 
                             {{-- 分页 --}}
-                            {!! $topics->appends(Request::except('page'))->render() !!}
+                            {!! $newsList->appends(Request::except('page'))->render() !!}
                         </ul>
                     @else
                         <div class="empty-block">暂无没有新闻哦</div>

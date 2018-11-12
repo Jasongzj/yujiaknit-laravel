@@ -20,7 +20,7 @@
                     </li>
                     @foreach ($categories as $category)
                     <li class="product-cate">
-                        <a href="{{ route('products.index', ['category_id' => $category->id]) }}" class="product-cate-link @if ($cate_id == $category->id)bg-white @else bg-gray @endif}">
+                        <a href="{{ route('products.index', ['category_id' => $category->id]) }}" class="product-cate-link @if ($category_id == $category->id)bg-white @else bg-gray @endif}">
                         <label>{{ $category->name }}</label>
                         <span class="glyphicon glyphicon-menu-right"></span>
                         </a>
@@ -36,7 +36,7 @@
                         <div class="product-detail">
                             <a class="product-link" href="{{ route('products.show', $product->id) }}">
                                 <div>
-                                    <img class="product-img" src="{{ $product->head_image }}" alt="">
+                                    <img class="product-img" src="{{ asset('images/' . $product->head_image) }}" alt="">
                                 </div>
                                 <div class="product-title"><h4>{{ $product->name }}</h4></div>
                             </a>

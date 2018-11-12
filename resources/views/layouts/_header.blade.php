@@ -37,7 +37,7 @@
                 <ul class="dropdown-menu" role="menu" aria-labelledby="subpro">
                     @foreach($categories as $category)
                         <li>
-                            <a href="">{{ $category->name }}</a>
+                            <a href="{{ route('products.index', ['category_id' => $category->id]) }}">{{ $category->name }}</a>
                         </li>
                     @endforeach
                 </ul>
