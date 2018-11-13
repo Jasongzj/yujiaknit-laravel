@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
 
-class CreateCategoryColorsTable extends Migration
+class CreateCategoryColorTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,13 +14,13 @@ class CreateCategoryColorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('category_colors', function (Blueprint $table) {
+        Schema::create('category_color', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('category_id')->unsigned()->comment('品类id');
             $table->integer('color_id')->unsigned()->comment('颜色id');
             $table->timestamps();
         });
-        DB::statement("ALTER TABLE `category_colors` comment '产品-颜色关系表'");
+        DB::statement("ALTER TABLE `category_color` comment '产品-颜色关系表'");
     }
 
     /**
@@ -30,6 +30,6 @@ class CreateCategoryColorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('category_colors');
+        Schema::dropIfExists('category_color');
     }
 }

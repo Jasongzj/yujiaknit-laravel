@@ -20,6 +20,11 @@ class Category extends Model
         return $this->hasMany(Product::class);
     }
 
+    public function colors()
+    {
+        return $this->belongsToMany(Color::class, 'category_color', 'category_id', 'color_id');
+    }
+
     public function getAllCache()
     {
         return Cache::remember($this->cacheKey, $this->cacheExpireInMinutes, function () {

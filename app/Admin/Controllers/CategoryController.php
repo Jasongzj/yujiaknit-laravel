@@ -4,6 +4,7 @@ namespace App\Admin\Controllers;
 
 use App\Models\Category;
 use App\Http\Controllers\Controller;
+use App\Models\Color;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -84,6 +85,12 @@ class CategoryController extends Controller
         $grid->id('Id');
         $grid->name('分类名称');
         $grid->icon('分类图标')->image('http://yujiaknit.test/images/', 100, 100);
+        $grid->colors()->display(function ($colors) {
+            $colors = array_map(function ($role) {
+                return '<span style="display: inline-block; width: 22px;height: 22px;background-color:' . $role['rgb'] . '"></span> ';
+            }, $colors);
+            return implode('', $colors);
+        });
         $grid->sort('排序值');
         $grid->created_at('创建时间');
         $grid->updated_at('修改时间');
@@ -124,6 +131,11 @@ class CategoryController extends Controller
 
         $form->text('name', '分类名称');
         $form->image('icon', '分类图标')->move('categories');
+        /*$colors = Color::all()->mapWithKeys(function ($item) {
+            $color = '<span style="display: inline-block; width: 22px;height: 22px;background-color:' . $item['rgb'] . '"></span> ';
+            return [$item['id'] =>  $color . $item['name']];
+        });*/
+        $form->checkbox('colors', '颜色值')->options(Color::all()->pluck('name', 'id'));
         $form->number('sort', '排序值');
 
         return $form;

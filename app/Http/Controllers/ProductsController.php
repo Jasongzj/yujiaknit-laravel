@@ -16,6 +16,7 @@ class ProductsController extends Controller
 
     public function show(Product $product)
     {
-        return view('products/show', compact('product'));
+        // 预加载
+        return view('products/show', ['product' => $product->load(['category.colors'])]);
     }
 }

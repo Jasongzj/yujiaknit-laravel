@@ -15,7 +15,7 @@ Route::get('/', 'IndexController@index')->name('root');
 
 Route::resource('news', 'NewsController', ['only' => 'index', 'show']);
 
-Route::resource('products', 'ProductsController', ['only' => 'index', 'show']);
+Route::resource('products', 'ProductsController', ['only' => ['index', 'show']]);
 
 Route::resource('brands', 'BrandsController', ['only' => 'index']);
 

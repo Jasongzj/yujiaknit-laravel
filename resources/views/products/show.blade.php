@@ -14,18 +14,20 @@
         </div>
         <div class="col-sm-5 sku-image">
             <div class="image-broad">
-                <img src="{{ $product->head_image }}">
+                <img src="{{ asset('images/' .$product->head_image) }}">
             </div>
-            <div class="sku-color">
-                <ul class="color-list">
-                    @foreach ($product->colors as $color)
-                    <li class="color">
-                        <div class="color-detail" style="background-color:rgb({{ $color->rgb }}); @if ($color->name =='WHITE')  'border: solid 1px #000;' @endif"></div>
-                        <p>{{ $color->name }}</p>
-                    </li>
-                    @endforeach
-                </ul>
-            </div>
+            @if($product->category->colors)
+                <div class="sku-color">
+                    <ul class="color-list">
+                        @foreach ($product->category->colors as $color)
+                            <li class="color">
+                                <div class="color-detail" style="background-color:{{ $color->rgb }}; @if ($color->name =='WHITE')  'border: solid 1px #000;' @endif"></div>
+                                <p>{{ $color->name }}</p>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
         </div>
         <div class="col-sm-6 sku-info">
             <div class="sku-name">
