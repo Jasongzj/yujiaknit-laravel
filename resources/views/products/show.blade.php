@@ -36,7 +36,7 @@
             </div>
             <hr>
             <div class="sku-note-area">
-                <ol class="sku-note">
+                <ul class="sku-note">
                     <li class="note">
                         <h4 style="color: #d43f3a;">Note:</h4>
                     </li>
@@ -55,10 +55,10 @@
                     <li class="color-name">
                         <span>5. Your offer had better give me your target market.</span>
                     </li>
-                </ol>
+                </ul>
             </div>
             <div class="inquire-area">
-                <a class="btn btn-danger" onclick="layerout('{:url('products/inquiry','detail='.$detail.id)}', 800, 600)"><h4 >CLICK HERE TO INQUIRE</h4></a>
+                <a class="btn btn-danger" onclick="layerout('{{ route('inquires.create', ['product_id' => $product->id]) }}', 800, 600)"><h4 >CLICK HERE TO INQUIRE</h4></a>
             </div>
             <div class="sku-thumb">
 
@@ -66,3 +66,20 @@
         </div>
     </div>
 @endsection
+
+@section('scriptAfterJs')
+    <script>
+        function layerout(url, w, h) {
+            layer.open({
+                type: 2,
+                title: "Inquiry",
+                area: [w+'px', h +'px'],
+                fix: false, //不固定
+                maxmin: true,
+                shade:0.4,
+                shadeClose: true, //点击遮罩关闭
+                content: url
+            });
+        }
+    </script>
+@stop

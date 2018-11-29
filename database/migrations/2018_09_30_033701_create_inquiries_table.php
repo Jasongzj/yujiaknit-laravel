@@ -20,7 +20,7 @@ class CreateInquiriesTable extends Migration
             $table->string('intential_products')->nullable()->comment('意向产品');
             $table->string('name')->comment('联系人');
             $table->string('email')->nullable()->comment('联系邮箱');
-            $table->integer('quantity')->comment('意向数量');
+            $table->string('quantity')->comment('意向数量');
             $table->string('market')->nullable()->comment('目标市场（xx, xx, xx）');
             $table->timestamps();
         });
