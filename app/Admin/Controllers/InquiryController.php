@@ -91,4 +91,22 @@ class InquiryController extends Controller
 
         return $show;
     }
+
+    /**
+     * Make a form builder.
+     *
+     * @return Form
+     */
+    protected function form()
+    {
+        $form = new Form(new Inquiry);
+        
+        $form->text('intential_products', 'Intential products');
+        $form->text('name', 'Name');
+        $form->email('email', 'Email');
+        $form->text('quantity', 'Quantity');
+        $form->text('market', 'Market');
+
+        return $form;
+    }
 }
