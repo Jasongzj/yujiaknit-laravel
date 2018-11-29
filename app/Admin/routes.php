@@ -19,4 +19,5 @@ Route::group([
     $router->resource('categories', CategoryController::class);
     $router->resource('news', NewsController::class);
     $router->resource('colors', ColorController::class);
+    $router->resource('inquiries', InquiryController::class);
 });

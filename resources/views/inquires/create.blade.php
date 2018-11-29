@@ -131,7 +131,7 @@
                 $("#customer-num").focus();
             });
             $("#customer-num").on('click', function (event) {
-                $("#customer").attr("checked", "checked");
+                $("#customer").prop("checked", true);
             }).on('blur', function (event) {
                 $("#customer").attr('value', $(this).val());
             });
