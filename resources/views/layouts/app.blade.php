@@ -14,21 +14,21 @@
     <meta name="keywords" content="polo,T-shirt,vest,sweater,hoddy,long sleeves,">
     <meta name="description" content="YU JIA Garment CO.LTD from China. The main polo,T-shirt,vest.Major for school polo,competive T-shirt,polo,vest.">
 
-    {{--<link href="__CSS__/bootstrap.min.css" rel="stylesheet">
-    <link href="__CSS__/carousel.css" rel="stylesheet">--}}
+    <!-- import Vue.js -->
+    <script src="//vuejs.org/js/vue.min.js"></script>
+    <!-- import stylesheet -->
+    <link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+    <!-- import iView -->
+    <script src="//unpkg.com/iview/dist/iview.min.js"></script>
+
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script>
-        (function(){
-            var bp = document.createElement('script');
-            var curProtocol = window.location.protocol.split(':')[0];
-            if (curProtocol === 'https'){
-                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-            }
-            else{
-                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-            }
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?52fc21429cf0b369c889231bf2f58a7a";
             var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(bp, s);
+            s.parentNode.insertBefore(hm, s);
         })();
     </script>
 </head>
