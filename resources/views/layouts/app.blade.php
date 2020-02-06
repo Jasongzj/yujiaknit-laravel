@@ -45,7 +45,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/layer/layer.js') }}"></script>
+    {{--<script src="{{ asset('js/layer/layer.js') }}"></script>--}}
     @yield('scriptAfterJs')
     <script>
         $(document).ready(function(){
