@@ -59,7 +59,7 @@
             <div class="license">
                 <ul id="scroll">
                     <li><img src="http://yujiaknit.opadsz.com/images/2017001.jpg"  alt=""/></li>
-                    <li><img src="http://yujiaknit.opadsz.com//2017005.jpg"  alt=""/></li>
+                    <li><img src="http://yujiaknit.opadsz.com/images/2017005.jpg"  alt=""/></li>
                     <li><img src="http://yujiaknit.opadsz.com/images/2017006.jpg"  alt=""/></li>
                     <li><img src="http://yujiaknit.opadsz.com/images/oeko.png" alt=""/></li>
                 </ul>
