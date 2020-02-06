@@ -15,11 +15,11 @@
     <meta name="description" content="YU JIA Garment CO.LTD from China. The main polo,T-shirt,vest.Major for school polo,competive T-shirt,polo,vest.">
 
     <!-- import Vue.js -->
-    <script src="//vuejs.org/js/vue.min.js"></script>
+    {{--<script src="//vuejs.org/js/vue.min.js"></script>--}}
     <!-- import stylesheet -->
-    <link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+    {{--<link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">--}}
     <!-- import iView -->
-    <script src="//unpkg.com/iview/dist/iview.min.js"></script>
+    {{--<script src="//unpkg.com/iview/dist/iview.min.js"></script>--}}
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script>
