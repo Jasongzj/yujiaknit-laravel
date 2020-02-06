@@ -68,7 +68,7 @@
                             </ul>
                         </div>
                         <div class="col-sm-3">
-                            <img class="wechat" src="{{ asset('images/icons/wx_contact.jpg') }}">
+                            <img class="wechat" src="http://yujiaknit.opadsz.com/images/icons/wx_contact.jpg">
                         </div>
 
                     </div>

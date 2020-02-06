@@ -1,7 +1,7 @@
 <nav class="navbar" role="navigation">
     <!--logo及导航按钮-->
     <div class="navbar-header">
-        <a class="logo" href="{{ route('root') }}"><img class="" src="{{ asset('images/logo-1.png') }}" title="logo" alt="logo"></a>
+        <a class="logo" href="{{ route('root') }}"><img class="" src="http://yujiaknit.opadsz.com/images/logo-1.png" title="logo" alt="logo"></a>
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navcol">
             <span class="sr-only">切换导航</span>
             <span class="icon-bar"></span>

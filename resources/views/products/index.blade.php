@@ -36,7 +36,7 @@
                         <div class="product-detail">
                             <a class="product-link" href="{{ route('products.show', $product->id) }}">
                                 <div>
-                                    <img class="product-img" src="{{ asset('images/' . $product->head_image) }}" alt="">
+                                    <img class="product-img" src="http://yujiaknit.opadsz.com/images/{{ $product->head_image }}" alt="">
                                 </div>
                                 <div class="product-title"><h4>{{ $product->name }}</h4></div>
                             </a>

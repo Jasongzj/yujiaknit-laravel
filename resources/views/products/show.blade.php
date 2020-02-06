@@ -14,7 +14,7 @@
         </div>
         <div class="col-sm-5 sku-image">
             <div class="image-broad">
-                <img src="{{ asset('images/' .$product->head_image) }}">
+                <img src="http://yujiaknit.opadsz.com/images/{{ $product->head_image }}">
             </div>
             @if($product->category->colors)
                 <div class="sku-color">

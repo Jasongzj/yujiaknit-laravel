@@ -26,11 +26,11 @@
                 </p>
             </div>
             <div class="col-sm-4 label">
-                <img src="{{ asset('images/brand/1500617942.png') }}" width="100%">
+                <img src="http://yujiaknit.opadsz.com/images/brand/1500617942.png" width="100%">
             </div>
             <div class="clearfix"></div>
             <div class="col-sm-4 certificate">
-                <img src="{{ asset('images/brand/2017001.jpg') }}" width="100%" style="margin-top: 20px">
+                <img src="http://yujiaknit.opadsz.com/images/brand/2017001.jpg" width="100%" style="margin-top: 20px">
             </div>
             <div class="col-sm-8">
                 <div class="concept">

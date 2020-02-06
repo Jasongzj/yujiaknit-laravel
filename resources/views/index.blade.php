@@ -15,16 +15,16 @@
             </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <a href="{{ route('products.index', ['category_id' => 1]) }}"><img class="first-slide" src="{{ asset('images/banner/golfer1.jpg') }}" alt="First slide"></a>
+                    <a href="{{ route('products.index', ['category_id' => 1]) }}"><img class="first-slide" src="http://yujiaknit.opadsz.com/images/banner/golfer1.jpg" alt="First slide"></a>
                 </div>
                 <div class="item">
-                    <a href="{{ route('products.index', ['category_id' => 1]) }}"><img class="second-slide" src="{{ asset('images/banner/baby-shirt1.jpg') }}" alt="Second slide"></a>
+                    <a href="{{ route('products.index', ['category_id' => 1]) }}"><img class="second-slide" src="http://yujiaknit.opadsz.com/images/banner/baby-shirt1.jpg" alt="Second slide"></a>
                 </div>
                 <div class="item">
-                    <img class="third-slide" src="{{ asset('images/banner/cotton.jpg') }}" alt="Third slide">
+                    <img class="third-slide" src="http://yujiaknit.opadsz.com/images/banner/cotton.jpg" alt="Third slide">
                 </div>
                 <div class="item">
-                    <img class="forth-slide" src="{{ asset('images/banner/container.jpg') }}" alt="Forth slide">
+                    <img class="forth-slide" src="http://yujiaknit.opadsz.com/images/banner/container.jpg" alt="Forth slide">
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
             @foreach($categories as $category)
                 <div class="col-xs-4 home-catelist">
                     <a class="home-cate-link"  href="{{ route('products.index', ['category_id' => $category->id]) }}">
-                        <div><img class="home-cate-img img-circle" src="{{ asset('images/' . $category->icon) }}" alt="POLO"></div>
+                        <div><img class="home-cate-img img-circle" src="http://yujiaknit.opadsz.com/images/{{ $category->icon }}" alt="POLO"></div>
                         <div class="home-cate-title">{{ $category->name }}</div>
                     </a>
                 </div>
@@ -58,10 +58,10 @@
         <div class="wrap">
             <div class="license">
                 <ul id="scroll">
-                    <li><img src="{{ asset('images/2017001.jpg') }}"  alt=""/></li>
-                    <li><img src="{{ asset('images/2017005.jpg') }}"  alt=""/></li>
-                    <li><img src="{{ asset('images/2017006.jpg') }}"  alt=""/></li>
-                    <li><img src="{{ asset('images/oeko.png') }}" alt=""/></li>
+                    <li><img src="http://yujiaknit.opadsz.com/images/2017001.jpg"  alt=""/></li>
+                    <li><img src="http://yujiaknit.opadsz.com//2017005.jpg"  alt=""/></li>
+                    <li><img src="http://yujiaknit.opadsz.com/images/2017006.jpg"  alt=""/></li>
+                    <li><img src="http://yujiaknit.opadsz.com/images/oeko.png" alt=""/></li>
                 </ul>
                 <ul id="scroll2"></ul>
             </div>
