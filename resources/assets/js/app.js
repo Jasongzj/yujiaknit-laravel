@@ -8,7 +8,8 @@
 require('./bootstrap');
 
 require('./layer/layer');
-require('./jquery.validate.min');
+
+require('./jquery.validate.min.js');
 
 // window.Vue = require('vue');
 
