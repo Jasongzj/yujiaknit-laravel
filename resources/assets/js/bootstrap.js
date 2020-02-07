@@ -11,7 +11,7 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap-sass');
-    require('jquery.validate.min');
+
 } catch (e) {}
 
 /**

@@ -13,3 +13,6 @@ let mix = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')
    .sass('resources/assets/sass/app.scss', 'public/css');
+
+mix.copy('resources/assets/js/jquery.validate.min.js', 'public/js/jquery.validate.min.js');
+mix.copyDirectory('resources/assets/js/layer', 'public/js/layer');

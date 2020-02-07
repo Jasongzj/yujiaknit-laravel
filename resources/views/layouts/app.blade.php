@@ -21,7 +21,7 @@
     <!-- import iView -->
     {{--<script src="//unpkg.com/iview/dist/iview.min.js"></script>--}}
 
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -44,8 +44,9 @@
     @include('layouts._footer')
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-    {{--<script src="{{ asset('js/layer/layer.js') }}"></script>--}}
+    <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ asset('js/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('js/layer/layer.js') }}"></script>
     @yield('scriptAfterJs')
     <script>
         $(document).ready(function(){
